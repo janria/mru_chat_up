@@ -1,0 +1,57 @@
+{
+  "name": "mru-webrtc",
+  "version": "1.0.0",
+  "description": "Real-time chat application for Muteesa I Royal University with WebRTC capabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "test": "concurrently \"cd server && npm test\" \"cd client && npm test\"",
+    "lint": "concurrently \"cd server && npm run lint\" \"cd client && npm run lint\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "webrtc",
+    "chat",
+    "real-time",
+    "socket.io",
+    "react",
+    "node",
+    "mongodb",
+    "university",
+    "education"
+  ],
+  "author": "Muteesa I Royal University",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "prettier": "^3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/mru-webrtc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/mru-webrtc/issues"
+  },
+  "homepage": "https://github.com/your-username/mru-webrtc#readme"
+}
